@@ -272,9 +272,11 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js" defer></script>
 
   <script>
+    require('dotenv').config();
+
     document.addEventListener('DOMContentLoaded', () => {
-      const supabaseUrl = config.SupabaseUrl;  // Supabase 프로젝트 URL
-      const supabaseKey = config.SupabaseKey;  // Supabase API Key
+      const supabaseUrl = process.env.SupabaseUrl;  // Supabase 프로젝트 URL
+      const supabaseKey = process.env.SupabaseKey;  // Supabase API Key
       window.supabase = supabase.createClient(supabaseUrl, supabaseKey);
 
       loadLockers();
@@ -283,7 +285,7 @@
 
     let lockers = Array(162).fill(null);
     let currentLockerIndex = null;
-    const adminRealPassword = 'kentech1234';
+    const adminRealPassword = process.env.AdminRealPassword;
 
     // 시간 제한 설정: 2025년 3월 17일 오전 10시
     function checkAccessTime() {
