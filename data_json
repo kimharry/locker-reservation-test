@@ -1,0 +1,17 @@
+[
+  {
+    "lockerNumber": 1,
+    "reserved": false,
+    "studentId": "",
+    "studentName": "",
+    "reservationTime": ""
+  },
+  {
+    "lockerNumber": 2,
+    "reserved": false,
+    "studentId": "",
+    "studentName": "",
+    "reservationTime": ""
+  },
+  // ... 추가된 사물함
+]
